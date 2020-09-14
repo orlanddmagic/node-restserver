@@ -21,6 +21,6 @@ let urlDB;
 if ( process.env.NODE_ENV === 'dev' ){
     urlDB = 'mongodb://localhost:27017/mezcal';
 }else{
-    urlDB = 'mongodb+srv://User:1234@cluster0.uts4c.mongodb.net/Mezcal'
+    urlDB = process.env.MONGO_URL;
 }
 process.env.urlDB = urlDB;
